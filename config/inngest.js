@@ -18,7 +18,7 @@ export const syncUserCreation = inngest.createFunction(
       _id: id,
       email: email_addresses[0].email_address,
       name: `${first_name} ${last_name}`,
-      image: image_url,
+      imageUrl: image_url,
     };
     await connectDB();
     await User.create(userData);
@@ -35,7 +35,7 @@ export const syncUserUpdate = inngest.createFunction(
         const userData = {
         email: email_addresses[0].email_address,
         name: `${first_name} ${last_name}`,
-        image: image_url,
+        imageUrl: image_url,
         };
         await connectDB();
         await User.findByIdAndUpdate(id, userData);
