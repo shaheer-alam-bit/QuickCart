@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-export default connectDB = async () => {
+const connectDB = async () => {
   try {
     await mongoose.connect(
       `${process.env.MONGO_URI}/quickcart`,
@@ -15,3 +15,5 @@ export default connectDB = async () => {
     process.exit(1);
   }
 };
+
+export default connectDB;
