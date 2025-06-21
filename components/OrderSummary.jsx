@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
 const OrderSummary = () => {
-  const { currency, router, getCartCount, getCartAmount, getToken, user } =
+  const { currency, router, getCartCount, getCartAmount, getToken, user,cartItems } =
     useAppContext();
   const [selectedAddress, setSelectedAddress] = useState(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
